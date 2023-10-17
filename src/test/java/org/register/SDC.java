@@ -8,7 +8,7 @@ public class SDC extends BaseClass {
 	public static Locators l = new Locators();
 
 	@Given("User should be in the  home page {string}")
-	public void user_should_be_in_the_home_page(String URL) {
+	public void user_should_be_in_the_home_page(String URL)  {
 		browserLaunch();
 		urlLaunch(URL);
 		maximise();
@@ -47,6 +47,48 @@ public class SDC extends BaseClass {
 		l = new Locators();
 		click(l.getSave());
 	}
+	
+	@Then("user should click login button")
+	public void user_should_click_login_button() {
+		l = new Locators();
+	   click(l.getLogin());
+	}
+	
+	@Then("Enter username and password {string},{string}")
+	public void enter_username_and_password(String username, String password) {
+		
+		sendkeys(l.getEmail(), username);
+		sendkeys(l.getPassword(), password);
+
+	   
+	}
+
+	@Then("click login button")
+	public void click_login_button() {
+	   click(l.getLogin2());
+	}
+       
+	@Then("click electronics link")
+	public void click_electronics_link() throws Exception {
+		Thread.sleep(5000);
+
+		click(l.getElectronics());
+		
+	}
+	   
+
+	@Then("click cellphones link")
+	public void click_cellphones_link() {
+	    click(l.getCellphones());
+	}
+
+	@Then("click add to cart button")
+	public void click_add_to_cart_button() {
+	   click(l.getAddtocart());
+	}
+
+	
+	
 
 
 
