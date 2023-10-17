@@ -48,6 +48,7 @@ public class SDC extends BaseClass {
 		click(l.getSave());
 	}
 	
+
 	@Then("user should click login button")
 	public void user_should_click_login_button() {
 		l = new Locators();
@@ -70,7 +71,6 @@ public class SDC extends BaseClass {
        
 	@Then("click electronics link")
 	public void click_electronics_link() throws Exception {
-		Thread.sleep(5000);
 
 		click(l.getElectronics());
 		
@@ -86,11 +86,4 @@ public class SDC extends BaseClass {
 	public void click_add_to_cart_button() {
 	   click(l.getAddtocart());
 	}
-
-	
-	
-
-
-
-
 }
