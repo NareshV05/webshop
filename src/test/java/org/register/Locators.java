@@ -34,8 +34,43 @@ public class Locators extends BaseClass {
 	
 	@FindBy (id = "register-button")
 	private WebElement save;
+	
+   @FindBy (xpath = "//a[contains(text(),'Log in')]")
+	private WebElement login;
+		
+	@FindBy (xpath = "(//input[@type='submit'])[2]")
+	private WebElement login2;
+		
+	@FindBy (xpath = "(//a[contains(text(),'Electronics')])[3]")
+	private WebElement electronics;
+		
+	@FindBy (xpath = "(//a[contains(text(),'Cell phones')])[3]")
+	private WebElement cellphones;
+		
+	@FindBy (xpath = "(//input[@value='Add to cart'])[1]")
+	private WebElement addtocart;
 
 	
+	public WebElement getLogin() {
+		return login;
+	}
+
+	public WebElement getLogin2() {
+		return login2;
+	}
+
+	public WebElement getElectronics() {
+		return electronics;
+	}
+
+	public WebElement getCellphones() {
+		return cellphones;
+	}
+
+	public WebElement getAddtocart() {
+		return addtocart;
+	}
+
 	public WebElement getSave() {
 		return save;
 	}

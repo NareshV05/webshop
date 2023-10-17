@@ -7,6 +7,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -72,5 +73,20 @@ public class BaseClass {
 
     	driver.quit();
 	}
+    
+    public static void moveto (WebElement b) {
+    	
+    	Actions a = new Actions(driver);
+    	
+    	a.moveToElement(b).perform();
+    }
+    
+ public static void clickaction (WebElement b) {
+    	
+    	Actions a = new Actions(driver);
+    	
+    	a.click(b).perform();
+    }
+ 
 
 }
