@@ -47,6 +47,29 @@ public class SDC extends BaseClass {
 		l = new Locators();
 		click(l.getSave());
 	}
+	
+	@Then("user should click login page")
+	public void user_should_click_login_page() {
+		l = new Locators();
+		
+		click(l.getLogin());
+	    
+	}
+
+	@Then("User should enter username and password {string},{string}")
+	public void user_should_enter_username_and_password(String username, String password) {
+	   sendkeys(l.getEmail(), username);
+	   sendkeys(l.getPassword(), password);
+	}
+
+	@Then("user should click login")
+	public void user_should_click_login() {
+		click(l.getLogin2());
+	   
+	}
+
+
+
 
 
 
