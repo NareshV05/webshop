@@ -86,4 +86,43 @@ public class SDC extends BaseClass {
 	public void click_add_to_cart_button() {
 	   click(l.getAddtocart());
 	}
+	
+	@Then("Navigate to gift card")
+	public void navigate_to_gift_card() {
+	    click(l.getGiftcard());
+	}
+
+	@Then("click on add to cart")
+	public void click_on_add_to_cart() {
+		click(l.getAddtocart());
+	   
+	}
+
+	@Then("Enter Recipient name and mail {string},{string}")
+	public void enter_recipient_name_and_mail(String name, String mail) {
+		sendkeys(l.getRmail(), mail);
+		sendkeys(l.getRname(), name);
+	    
+	}
+
+	@Then("click send as mail")
+	public void click_send_as_mail() {
+		click(l.getEmailfriend());
+	   
+	}
+
+	@Then("Enter Recipient mail {string}")
+	public void enter_recipient_mail(String mail) {
+		sendkeys(l.getEmailfriend2(), mail);
+	    
+	}
+
+	@Then("click send mail")
+	public void click_send_mail() {
+		click(l.getSendmail());
+	   
+	}
+
+
+
 }
