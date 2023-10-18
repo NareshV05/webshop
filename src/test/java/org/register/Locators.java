@@ -49,8 +49,52 @@ public class Locators extends BaseClass {
 		
 	@FindBy (xpath = "(//input[@value='Add to cart'])[1]")
 	private WebElement addtocart;
+	
+	@FindBy (xpath = "//a[contains(text(),'Gift Cards')]")
+	private WebElement giftcard;
+	
+	@FindBy (xpath = "//input[@class='recipient-name']")
+	private WebElement Rname;
+	
+	@FindBy (xpath = "//input[@class='recipient-email']")
+	private WebElement Rmail;
+
+	@FindBy (xpath = "//input[@value='Email a friend']")
+	private WebElement emailfriend;
+	
+	@FindBy (xpath = "//input[@class='friend-email']")
+	private WebElement emailfriend2;
+	
+	@FindBy (xpath = "//input[@name='send-email']")
+	private WebElement sendmail;
 
 	
+	
+	
+	public WebElement getGiftcard() {
+		return giftcard;
+	}
+
+	public WebElement getRname() {
+		return Rname;
+	}
+
+	public WebElement getRmail() {
+		return Rmail;
+	}
+
+	public WebElement getEmailfriend() {
+		return emailfriend;
+	}
+
+	public WebElement getEmailfriend2() {
+		return emailfriend2;
+	}
+
+	public WebElement getSendmail() {
+		return sendmail;
+	}
+
 	public WebElement getLogin() {
 		return login;
 	}
